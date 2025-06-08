@@ -514,9 +514,13 @@ opacity:1;
         position:absolute;
         padding:72px 24px 24px 24px;
 }
-.icon-close{
-fill:#2E2F42;
+.button-close{
+    fill: #2e2f42; 
 }
+.icon-close {  
+    fill: #2e2f42;    
+}
+
 .paragraph-form{
     font-weight: 500;
         font-size: 16px;
@@ -558,6 +562,9 @@ gap: 8px
 .form-input:focus-within{
 border-color: #4d5ae5; 
 }
+.icon{
+    fill:#4d5ae5;
+}
 .textareabox {
 
 }
@@ -578,7 +585,7 @@ border-color: #4d5ae5;
 
 
 .checkbox {
-
+ 
 }
 
 .Policy {
