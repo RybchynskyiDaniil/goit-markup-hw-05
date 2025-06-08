@@ -485,3 +485,36 @@ margin-right: 120px;
    background-color: #31d0aa;
   }
   
+  /*------ FORM---------- */
+  .backdrop {
+position: fixed;
+width: 100vw;
+height: 100vh;
+background-color: rgba(46, 47, 66, 0.4);
+top: 0;
+pointer-events: none;
+opacity:0;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index:999;
+}
+
+.is-open{
+pointer-events: auto;
+opacity:1;
+}
+
+.modal{
+    width: 408px;
+    min-height: 584px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+        background-color: #fcfcfc;
+        border-radius: 4px;
+        position:absolute;
+}
+.button-close{
+fill:#2E2F42;
+}
+    
+  /*------ END FORM---------- */
