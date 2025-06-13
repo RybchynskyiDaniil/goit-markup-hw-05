@@ -493,18 +493,23 @@ margin-right: 80px;
   }
   .subscribe-form{
 display: flex;
+gap: 24px;
   }
   .subscribe-input{
-margin-right: 24px;
 border: 1px solid #fff;
     border-radius: 4px;
     width: 264px;
     height: 40px;
     background-color: transparent;
     padding-left:16px;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    color: #ffffff;
   }
   .subscribe-button{
-    
+    min-width: 165px;
         padding: 8px 24px;
         border: none;
         border-radius: 4px;
@@ -519,14 +524,13 @@ border: 1px solid #fff;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 16px;
   }
   .subscribe-input::placeholder{
     font-weight: 400;
         font-size: 12px;
         line-height: 2;
         letter-spacing: 0.04em;
-        color: #fff;
+        color: #ffffff;
   }
 
   .subscribe-button:hover,
@@ -535,7 +539,7 @@ border: 1px solid #fff;
   
   .icon-plane{
     fill:#fff;
-
+    margin-left: 16px;
   }
   
 
@@ -549,10 +553,8 @@ background-color: rgba(46, 47, 66, 0.4);
 top: 0;
 pointer-events: none;
 opacity:0;
-display: flex;
-justify-content: center;
-align-items: center;
 z-index:999;
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open{
@@ -568,14 +570,17 @@ opacity:1;
         border-radius: 4px;
         position:absolute;
         padding:72px 24px 24px 24px;
+        top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-close{
-    fill: #2e2f42; 
+    background-color: #e7e9fc;
     position: absolute;
     top: 24px;
     right: 24px;
-    border-radius: 100%;
-        fill: #e7e9fc;
+    border-radius: 50%;
         border: 1px solid rgba(0, 0, 0, 0.1);
 width: 24px;
 height: 24px;
@@ -585,6 +590,7 @@ align-items: center;
 cursor: pointer;
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 0;
 }
 .button-close:hover,
 .button-close:focus{
@@ -619,18 +625,18 @@ fill: #4d5ae5;}
 .form-contact {
 display: flex;
 flex-direction: column;
-gap: 8px
+
 
 }
 
 .inputbox {
-
+    margin-bottom:8px;
 }
 
 .form-label {
     font-weight: 400;
         font-size: 12px;
-        line-height: 1.16667;
+        line-height: 1.17;
         letter-spacing: 0.04em;
         color: #8e8f99;
         display: block;
@@ -645,6 +651,7 @@ gap: 8px
         outline: transparent;
         padding-left: 38px;
         transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        background-color: transparent;
  }
  .input-icon-box{
  position: relative;   
@@ -665,7 +672,7 @@ fill: #4d5ae5;
 }
 
 .textareabox {
-
+    margin-bottom:16px;
 }
 
 .form-comment {
@@ -677,9 +684,15 @@ fill: #4d5ae5;
         padding: 8px 16px;
         font-weight: 400;
             font-size: 12px;
-            line-height: 1.16667;
+            line-height: 1.17;
             letter-spacing: 0.04em;
             color: rgba(46, 47, 66, 0.4);
+            background-color: transparent;
+            resize: none;
+            transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-comment:focus-within{
+border-color: #4D5AE5;
 }
 
 .terms-end-condition{
@@ -705,7 +718,7 @@ input[type="checkbox"]:checked + .form-label .checkbox {
     border: none;
     fill:#f4f4fd ; }
 
-.Policy {
+.policy {
     line-height: 1.33333;
         text-decoration: underline;
         text-decoration-skip-ink: none;
